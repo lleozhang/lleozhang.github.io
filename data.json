@@ -1,0 +1,83 @@
+{
+  "profile": {
+    "name": "Huixuan Zhang",
+    "role": "PhD Student",
+    "institution": "Peking University",
+    "photo": "./assets/profile.png",
+    "photoAlt": "",
+    "bio": "I study generative AI and computer vision, with a focus on text-to-image diffusion models, image–text alignment, and the evaluation and detection of AI-generated images.",
+    "links": [
+      {
+        "label": "Google Scholar",
+        "href": "https://scholar.google.com/citations?user=SHq_RX0AAAAJ"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/lleozhang"
+      }
+    ],
+    "cv": "",
+    "footer": "Huixuan Zhang · Academic homepage"
+  },
+  "interests": [
+    "Generative models and diffusion",
+    "Text-to-image alignment and controllable generation",
+    "AI-generated image detection and evaluation"
+  ],
+  "news": [
+    {
+      "date": "2025-11",
+      "text": "R-Bind appeared at EMNLP 2025."
+    },
+    {
+      "date": "2024-05",
+      "text": "Image Matters appeared at LREC-COLING 2024."
+    }
+  ],
+  "experience": [
+    {
+      "period": "",
+      "text": "PhD studies · Peking University"
+    }
+  ],
+  "publications": [
+    {
+      "year": 2025,
+      "title": "R-Bind: Unified Enhancement of Attribute and Relation Binding in Text-to-Image Diffusion Models",
+      "venue": "EMNLP",
+      "authors": [
+        "Huixuan Zhang",
+        "Xiaojun Wan"
+      ],
+      "topics": [
+        "Text-to-Image Generation"
+      ],
+      "thumbnail": "./assets/diffusion.png",
+      "description": "An inference-time method for improving attribute and relation binding in text-to-image diffusion models.",
+      "links": {
+        "Paper": "https://aclanthology.org/2025.emnlp-main.349/",
+        "Code": "https://github.com/lleozhang/R-Bind"
+      },
+      "bibtex": "@inproceedings{zhang-wan-2025,\n  title = {{R-Bind: Unified Enhancement of Attribute and Relation Binding in Text-to-Image Diffusion Models}},\n  author = {Zhang, Huixuan and Wan, Xiaojun},\n  booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},\n  year = {2025},\n  pages = {6856--6870},\n  url = {https://aclanthology.org/2025.emnlp-main.349/}\n}"
+    },
+    {
+      "year": 2024,
+      "title": "Image Matters: A New Dataset and Empirical Study for Multimodal Hyperbole Detection",
+      "venue": "LREC-COLING",
+      "authors": [
+        "Huixuan Zhang",
+        "Xiaojun Wan"
+      ],
+      "topics": [
+        "Multimodal Learning"
+      ],
+      "thumbnail": "./assets/alignment.png",
+      "description": "A dataset and empirical study on identifying hyperbole using both text and images.",
+      "links": {
+        "Paper": "https://aclanthology.org/2024.lrec-main.759/",
+        "Dataset": "https://github.com/lleozhang/Multimodal_Hyperbole"
+      },
+      "bibtex": "@inproceedings{zhang-wan-2024,\n  title = {{Image Matters: A New Dataset and Empirical Study for Multimodal Hyperbole Detection}},\n  author = {Zhang, Huixuan and Wan, Xiaojun},\n  booktitle = {Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)},\n  year = {2024},\n  pages = {8652--8661},\n  url = {https://aclanthology.org/2024.lrec-main.759/}\n}"
+    }
+  ]
+}

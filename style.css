@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light;
+  --bg: #fff;
+  --text: #1a2636;
+  --muted: #475569;
+  --line: #dce4ed;
+  --panel: #f4f7fb;
+  --accent: #245886;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111923;
+  --text: #e8eff7;
+  --muted: #b4c2d3;
+  --line: #344355;
+  --panel: #1a2634;
+  --accent: #a4cdf4;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 1rem/1.65 system-ui, sans-serif; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: .13em; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.skip { position: absolute; top: -5rem; background: var(--bg); padding: .5rem; }
+.skip:focus { top: .5rem; }
+.wrap { width: min(66rem, calc(100% - 3rem)); margin-inline: auto; }
+header { border-bottom: 1px solid var(--line); }
+.bar, nav, .links, .section-heading { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; }
+.bar { padding-block: 1rem; }
+nav { margin-left: auto; }
+#brand { font-weight: 750; color: var(--text); }
+.bar a { text-decoration: none; }
+.bar a:hover { text-decoration: underline; }
+.hero { display: grid; grid-template-columns: 12rem 1fr; align-items: center; gap: clamp(1.5rem, 5vw, 4rem); padding-block: 3rem; }
+.hero img { width: 100%; height: auto; aspect-ratio: 192/220; object-fit: cover; border-radius: .75rem; background: var(--panel); }
+h1, h2, h3, p { margin: 0; }
+h1, h2 { font-family: Georgia, serif; font-weight: 500; line-height: 1.15; }
+h1 { font-size: clamp(2.7rem, 7vw, 5rem); margin-block: .25rem .7rem; letter-spacing: -.055em; }
+h2 { font-size: clamp(1.65rem, 4vw, 2.25rem); margin-bottom: .8rem; }
+h3 { line-height: 1.35; font-size: 1.15rem; }
+.eyebrow, #count, .meta, time, footer { color: var(--muted); }
+#bio { max-width: 62ch; }
+#contacts { margin-top: 1rem; }
+.overview { display: grid; grid-template-columns: 1fr 1.15fr; gap: 2rem; }
+.overview, #publications, #cv { border-top: 1px solid var(--line); padding-block: 1.7rem; }
+ul { margin: 0; padding-left: 1.2rem; }
+#updates, #experience { list-style: none; padding: 0; }
+#updates li, #experience li { display: grid; grid-template-columns: 8rem 1fr; gap: .75rem; margin-bottom: .55rem; }
+.section-heading { justify-content: space-between; margin-bottom: .8rem; }
+.section-heading h2 { margin: 0; }
+.filters { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: .75rem; padding: .85rem; background: var(--panel); border-radius: .6rem; }
+label { display: grid; gap: .25rem; font-size: .9rem; min-width: 0; }
+button, input, select { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: .35rem; padding: .38rem .65rem; min-width: 0; }
+select { appearance: none; padding-right: 1.9rem; background: linear-gradient(45deg, transparent 50%, var(--muted) 50%) right .86rem center/5px 5px no-repeat, linear-gradient(135deg, var(--muted) 50%, transparent 50%) right .55rem center/5px 5px no-repeat, var(--bg); }
+button, select, summary { cursor: pointer; }
+article { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 1.25rem; padding-block: 1.35rem; border-bottom: 1px solid var(--line); }
+article img { width: 100%; height: auto; aspect-ratio: 8/5; object-fit: cover; border-radius: .45rem; background: var(--panel); }
+article p, article .links, details { margin-top: .32rem; }
+details { color: var(--accent); }
+pre { color: var(--text); background: var(--panel); padding: .75rem; overflow: auto; border-radius: .35rem; }
+.empty { padding-block: 1rem; }
+footer { border-top: 1px solid var(--line); padding-block: 1.5rem; font-size: .9rem; }
+@media (max-width: 680px) {
+  .wrap { width: calc(100% - 2rem); }
+  nav { order: 1; width: 100%; margin: 0; }
+  #theme { margin-left: auto; }
+  .hero, .overview, article { grid-template-columns: 1fr; }
+  .hero { padding-block: 2rem; }
+  .hero img { width: 8rem; }
+  article img { width: min(100%, 14rem); }
+  .filters { grid-template-columns: 1fr 1fr; }
+  .filters label:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 380px) {
+  #updates li, #experience li, .filters { grid-template-columns: 1fr; gap: .25rem; }
+}

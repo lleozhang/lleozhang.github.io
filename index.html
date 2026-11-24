@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Academic homepage of Huixuan Zhang, a PhD student at Peking University.">
+<title>Huixuan Zhang · Research</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+<header><div class="wrap bar">
+<a id="brand" href="#about">Huixuan Zhang</a>
+<nav aria-label="Main navigation">
+<a href="#research">Research</a><a href="#news">News</a><a href="#publications">Publications</a><a href="#cv">Education</a>
+</nav>
+<button id="theme" type="button" aria-label="Dark mode" aria-pressed="false">Dark mode</button>
+</div></header>
+<main class="wrap">
+<p id="load" role="status">Loading profile…</p>
+<noscript><p>Enable JavaScript to load the profile and publications.</p></noscript>
+<div id="content" hidden>
+<section id="about" class="hero" aria-labelledby="name">
+<img id="portrait" width="192" height="220" alt="">
+<div><p id="role" class="eyebrow"></p><h1 id="name"></h1><p id="bio"></p><div id="contacts" class="links"></div></div>
+</section>
+<div class="overview">
+<section id="research"><h2>Research Interests</h2><ul id="interests"></ul></section>
+<section id="news"><h2>News</h2><ul id="updates"></ul></section>
+</div>
+<section id="publications">
+<div class="section-heading"><h2>Publications</h2><p id="count" role="status"></p></div>
+<div class="filters">
+<label>Search <input id="search" type="search" placeholder="Title, author, topic…"></label>
+<label>Year <select id="year"><option value="">All years</option></select></label>
+<label>Topic <select id="topic"><option value="">All topics</option></select></label>
+</div>
+<div id="papers"></div>
+</section>
+<section id="cv"><div class="section-heading"><h2>Education &amp; Experience</h2><a id="cv-link" hidden>View CV</a></div><ul id="experience"></ul></section>
+<footer id="footer"></footer>
+</div>
+</main>
+</body>
+</html>
