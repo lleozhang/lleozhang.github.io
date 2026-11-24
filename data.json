@@ -3,10 +3,14 @@
     "name": "Huixuan Zhang",
     "role": "PhD Student",
     "institution": "Peking University",
-    "photo": "./assets/profile.png",
-    "photoAlt": "",
-    "bio": "I study generative AI and computer vision, with a focus on text-to-image diffusion models, image–text alignment, and the evaluation and detection of AI-generated images.",
+    "photo": "./assets/huixuan-zhang.png",
+    "photoAlt": "Huixuan Zhang",
+    "bio": "My current research focuses on multimodal generation, especially text-to-image diffusion models. I study inference-time alignment, controllable generation, and efficient guidance. I have also worked on multimodal evaluation, hallucination detection, benchmark contamination, and detection of AI-generated images.",
     "links": [
+      {
+        "label": "zhanghuixuan@stu.pku.edu.cn",
+        "href": "mailto:zhanghuixuan@stu.pku.edu.cn"
+      },
       {
         "label": "Google Scholar",
         "href": "https://scholar.google.com/citations?user=SHq_RX0AAAAJ"
@@ -20,11 +24,23 @@
     "footer": "Huixuan Zhang · Academic homepage"
   },
   "interests": [
-    "Generative models and diffusion",
-    "Text-to-image alignment and controllable generation",
-    "AI-generated image detection and evaluation"
+    "Multimodal generation, with a focus on text-to-image generation",
+    "Controllable diffusion and efficient guidance",
+    "Image–text alignment, including attribute and relation binding"
   ],
   "news": [
+    {
+      "date": "2026-11",
+      "text": "Released Direct Trajectory Optimization (DTO) as an arXiv preprint."
+    },
+    {
+      "date": "2026-07",
+      "text": "Minos and JointCQ appeared in Findings of ACL 2026."
+    },
+    {
+      "date": "2025-12",
+      "text": "How Much To Guide appeared at ACM Multimedia Asia 2025."
+    },
     {
       "date": "2025-11",
       "text": "R-Bind appeared at EMNLP 2025."
@@ -42,6 +58,360 @@
   ],
   "publications": [
     {
+      "title": "Direct Trajectory Optimization for Inference-Time Alignment of Text-to-Image Diffusion Models",
+      "authors": [
+        "Huixuan Zhang",
+        "Li Lin",
+        "Junzhe Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "area": "Multimodal Generation",
+      "topics": [],
+      "description": "Aligns text-to-image diffusion models with reward functions by optimizing the sampling trajectory at inference time, without backpropagating through the denoising network.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2611.11821"
+      },
+      "bibtex": "@misc{zhang2026dto,\n  title = {{Direct Trajectory Optimization for Inference-Time Alignment of Text-to-Image Diffusion Models}},\n  author = {Huixuan Zhang and Li Lin and Junzhe Zhang and Xiaojun Wan},\n  year = {2026},\n  eprint = {2611.11821},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.11821}\n}",
+      "thumbnail": "./assets/dto.png",
+      "thumbnailAlt": "Qualitative comparison of four text-to-image alignment methods, including DTO"
+    },
+    {
+      "title": "Re-Thinking the Automatic Evaluation of Image-Text Alignment in Text-to-Image Models",
+      "authors": [
+        "Huixuan Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "area": "Multimodal Evaluation",
+      "topics": [],
+      "description": "Tests whether automatic image–text alignment metrics are robust to small changes and whether their model rankings are statistically meaningful.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2506.08480"
+      },
+      "bibtex": "@misc{zhang2025rethink,\n  title = {{Re-Thinking the Automatic Evaluation of Image-Text Alignment in Text-to-Image Models}},\n  author = {Huixuan Zhang and Xiaojun Wan},\n  year = {2025},\n  eprint = {2506.08480},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2506.08480}\n}",
+      "thumbnail": "./assets/rethink.png",
+      "thumbnailAlt": "A visually imperceptible image change produces a substantial difference in VQAScore"
+    },
+    {
+      "title": "M³T2IBench: A Large-Scale Multi-Category, Multi-Instance, Multi-Relation Text-to-Image Benchmark",
+      "authors": [
+        "Huixuan Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "area": "Multimodal Evaluation",
+      "topics": [],
+      "description": "Benchmarks prompts with multiple object categories, repeated instances, and relations, and introduces the detection-based AlignScore metric.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2510.23020"
+      },
+      "bibtex": "@misc{zhang2025m3t2ibench,\n  title = {{M³T2IBench: A Large-Scale Multi-Category, Multi-Instance, Multi-Relation Text-to-Image Benchmark}},\n  author = {Huixuan Zhang and Xiaojun Wan},\n  year = {2025},\n  eprint = {2510.23020},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2510.23020}\n}",
+      "thumbnail": "./assets/m3t2ibench.png",
+      "thumbnailAlt": "Overview of benchmark construction and AlignScore calculation"
+    },
+    {
+      "title": "KBE-DME: Dynamic Multimodal Evaluation via Knowledge Enhanced Benchmark Evolution",
+      "authors": [
+        "Junzhe Zhang",
+        "Huixuan Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "area": "Multimodal Evaluation",
+      "topics": [],
+      "description": "Uses knowledge-based benchmark evolution to generate new evaluation items for multimodal models.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2510.21182"
+      },
+      "bibtex": "@misc{zhang2025kbedme,\n  title = {{KBE-DME: Dynamic Multimodal Evaluation via Knowledge Enhanced Benchmark Evolution}},\n  author = {Junzhe Zhang and Huixuan Zhang and Xiaojun Wan},\n  year = {2025},\n  eprint = {2510.21182},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2510.21182}\n}",
+      "thumbnail": "./assets/kbedme.png",
+      "thumbnailAlt": "Graph formulation and knowledge-enhanced benchmark evolution framework"
+    },
+    {
+      "title": "DMC-CF: Dynamic Multimodal CounterFactual QA benchmark for Causal Reasoning",
+      "authors": [
+        "Junzhe Zhang",
+        "Huixuan Zhang",
+        "Guirong Wang",
+        "Xingyao Zhang",
+        "Pei Liu",
+        "Lin Qu",
+        "Hu Wei",
+        "Xiaojun Wan"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "area": "Multimodal Evaluation",
+      "topics": [],
+      "description": "Introduces a dynamic multimodal question-answering benchmark for assessing causal reasoning under counterfactual changes.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2605.29339"
+      },
+      "bibtex": "@misc{zhang2026dmccf,\n  title = {{DMC-CF: Dynamic Multimodal CounterFactual QA benchmark for Causal Reasoning}},\n  author = {Junzhe Zhang and Huixuan Zhang and Guirong Wang and Xingyao Zhang and Pei Liu and Lin Qu and Hu Wei and Xiaojun Wan},\n  year = {2026},\n  eprint = {2605.29339},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2605.29339}\n}",
+      "thumbnail": "./assets/dmccf.png",
+      "thumbnailAlt": "Static causal graph and dynamic graph intervention example"
+    },
+    {
+      "title": "MC-MKE: A Fine-Grained Multimodal Knowledge Editing Benchmark Emphasizing Modality Consistency",
+      "authors": [
+        "Junzhe Zhang",
+        "Huixuan Zhang",
+        "Xunjian Yin",
+        "Baizhou Huang",
+        "Xu Zhang",
+        "Xinyu Hu",
+        "Xiaojun Wan"
+      ],
+      "year": 2025,
+      "venue": "Findings of ACL",
+      "area": "Multimodal Evaluation",
+      "topics": [],
+      "description": "Provides a fine-grained benchmark for testing whether multimodal knowledge edits stay consistent across modalities.",
+      "links": {
+        "Paper": "https://aclanthology.org/2025.findings-acl.896/",
+        "Repository": "https://github.com/reroze/MC-MKE",
+        "Dataset": "https://huggingface.co/datasets/reroze/MC-MKE"
+      },
+      "bibtex": "@inproceedings{zhang2025mcmke,\n  title = {{MC-MKE: A Fine-Grained Multimodal Knowledge Editing Benchmark Emphasizing Modality Consistency}},\n  author = {Junzhe Zhang and Huixuan Zhang and Xunjian Yin and Baizhou Huang and Xu Zhang and Xinyu Hu and Xiaojun Wan},\n  year = {2025},\n  booktitle = {Findings of ACL},\n  doi = {10.18653/v1/2025.findings-acl.896},\n  url = {https://aclanthology.org/2025.findings-acl.896/}\n}",
+      "thumbnail": "./assets/mcmke.png",
+      "thumbnailAlt": "Multimodal knowledge editing data construction and selection"
+    },
+    {
+      "title": "Quantity Matters: Towards Assessing and Mitigating Number Hallucination in Large Vision-Language Models",
+      "authors": [
+        "Huixuan Zhang",
+        "Junzhe Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "area": "Hallucination and Factuality",
+      "topics": [],
+      "description": "Evaluates object-count errors in large vision-language models and uses consistency training to reduce number hallucinations.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2403.01373"
+      },
+      "bibtex": "@misc{zhang2024quantity,\n  title = {{Quantity Matters: Towards Assessing and Mitigating Number Hallucination in Large Vision-Language Models}},\n  author = {Huixuan Zhang and Junzhe Zhang and Xiaojun Wan},\n  year = {2024},\n  eprint = {2403.01373},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2403.01373}\n}",
+      "thumbnail": "./assets/quantity.png",
+      "thumbnailAlt": "An example of incorrect object counting by a vision-language model"
+    },
+    {
+      "title": "C-FAITH: A Chinese Fine-Grained Benchmark for Automated Hallucination Evaluation",
+      "authors": [
+        "Xu Zhang",
+        "Zhifei Liu",
+        "Jiahao Wang",
+        "Huixuan Zhang",
+        "Fan Xu",
+        "Junzhe Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2025,
+      "venue": "CIKM",
+      "area": "Hallucination and Factuality",
+      "topics": [],
+      "description": "Introduces a Chinese benchmark for fine-grained assessment of whether generated text stays faithful to its source.",
+      "links": {
+        "Paper": "https://doi.org/10.1145/3746252.3761604",
+        "Preprint": "https://arxiv.org/abs/2504.10167",
+        "Code": "https://github.com/pkulcwmzx/C-FAITH"
+      },
+      "bibtex": "@inproceedings{zhang2025cfaith,\n  title = {{C-FAITH: A Chinese Fine-Grained Benchmark for Automated Hallucination Evaluation}},\n  author = {Xu Zhang and Zhifei Liu and Jiahao Wang and Huixuan Zhang and Fan Xu and Junzhe Zhang and Xiaojun Wan},\n  year = {2025},\n  booktitle = {CIKM},\n  doi = {10.1145/3746252.3761604},\n  url = {https://doi.org/10.1145/3746252.3761604}\n}",
+      "thumbnail": "./assets/cfaith.png",
+      "thumbnailAlt": "HaluAgent framework for data generation, verification, and optimization"
+    },
+    {
+      "title": "Exploring Causal Effect of Social Bias on Faithfulness Hallucinations in Large Language Models",
+      "authors": [
+        "Zhenliang Zhang",
+        "Junzhe Zhang",
+        "Xinyu Hu",
+        "Huixuan Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2025,
+      "venue": "CIKM",
+      "area": "Hallucination and Factuality",
+      "topics": [],
+      "description": "Studies whether and how social bias affects the faithfulness of large language model outputs.",
+      "links": {
+        "Paper": "https://doi.org/10.1145/3746252.3761298",
+        "Preprint": "https://arxiv.org/abs/2508.07753"
+      },
+      "bibtex": "@inproceedings{zhang2025socialbias,\n  title = {{Exploring Causal Effect of Social Bias on Faithfulness Hallucinations in Large Language Models}},\n  author = {Zhenliang Zhang and Junzhe Zhang and Xinyu Hu and Huixuan Zhang and Xiaojun Wan},\n  year = {2025},\n  booktitle = {CIKM},\n  doi = {10.1145/3746252.3761298},\n  url = {https://doi.org/10.1145/3746252.3761298}\n}",
+      "thumbnail": "./assets/social-bias.png",
+      "thumbnailAlt": "Experimental framework for assessing how social bias affects faithfulness"
+    },
+    {
+      "title": "PaCoST: Paired Confidence Significance Testing for Benchmark Contamination Detection in Large Language Models",
+      "authors": [
+        "Huixuan Zhang",
+        "Yun Lin",
+        "Xiaojun Wan"
+      ],
+      "year": 2024,
+      "venue": "Findings of EMNLP",
+      "area": "Data Contamination and Training Data Privacy",
+      "topics": [],
+      "description": "Tests for benchmark contamination by comparing model confidence on original items with confidence on matched paraphrases.",
+      "links": {
+        "Paper": "https://aclanthology.org/2024.findings-emnlp.97/",
+        "Code": "https://github.com/PKU-ONELab/PaCoST",
+        "Author implementation": "https://github.com/lleozhang/PaCoST"
+      },
+      "bibtex": "@inproceedings{zhang2024pacost,\n  title = {{PaCoST: Paired Confidence Significance Testing for Benchmark Contamination Detection in Large Language Models}},\n  author = {Huixuan Zhang and Yun Lin and Xiaojun Wan},\n  year = {2024},\n  booktitle = {Findings of EMNLP},\n  doi = {10.18653/v1/2024.findings-emnlp.97},\n  url = {https://aclanthology.org/2024.findings-emnlp.97/}\n}",
+      "thumbnail": "./assets/pacost.png",
+      "thumbnailAlt": "Overview of paired confidence testing for benchmark contamination"
+    },
+    {
+      "title": "Tracing Training Footprints: A Calibration Approach for Membership Inference Attacks Against Multimodal Large Language Models",
+      "authors": [
+        "Xiaofan Zheng",
+        "Huixuan Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2025,
+      "venue": "Findings of EMNLP",
+      "area": "Data Contamination and Training Data Privacy",
+      "topics": [],
+      "description": "Studies calibrated membership inference for assessing training-data exposure in multimodal language models.",
+      "links": {
+        "Paper": "https://aclanthology.org/2025.findings-emnlp.931/",
+        "Code": "https://github.com/qingpingwan/PC-MMIA"
+      },
+      "bibtex": "@inproceedings{zheng2025footprints,\n  title = {{Tracing Training Footprints: A Calibration Approach for Membership Inference Attacks Against Multimodal Large Language Models}},\n  author = {Xiaofan Zheng and Huixuan Zhang and Xiaojun Wan},\n  year = {2025},\n  booktitle = {Findings of EMNLP},\n  doi = {10.18653/v1/2025.findings-emnlp.931},\n  url = {https://aclanthology.org/2025.findings-emnlp.931/}\n}",
+      "thumbnail": "./assets/pc-mmia.png",
+      "thumbnailAlt": "Overview of PC-MMIA calibration for multimodal membership inference"
+    },
+    {
+      "title": "UniAIDet: A Unified and Universal Benchmark for AI-Generated Image Content Detection and Localization",
+      "authors": [
+        "Huixuan Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "area": "AI-Generated Image Detection",
+      "topics": [],
+      "description": "Benchmarks detection and localization of AI-generated or edited regions across photographic and artistic images and diverse generators.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2510.23023",
+        "Full dataset (Hugging Face)": "https://huggingface.co/datasets/PKU-ONELab/UniAIDet"
+      },
+      "bibtex": "@misc{zhang2025uniaidet,\n  title = {{UniAIDet: A Unified and Universal Benchmark for AI-Generated Image Content Detection and Localization}},\n  author = {Huixuan Zhang and Xiaojun Wan},\n  year = {2025},\n  eprint = {2510.23023},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2510.23023}\n}",
+      "thumbnail": "./assets/uniaidet.png",
+      "thumbnailAlt": "Overview of the UniAIDet benchmark and its image-generation tasks"
+    },
+    {
+      "title": "EAMA: Entity-Aware Multimodal Alignment Based Approach for News Image Captioning",
+      "authors": [
+        "Junzhe Zhang",
+        "Huixuan Zhang",
+        "Xunjian Yin",
+        "Xiaojun Wan"
+      ],
+      "year": 2026,
+      "venue": "ACM Transactions on Multimedia Computing, Communications, and Applications",
+      "area": "Multimodal Understanding",
+      "topics": [],
+      "description": "Improves news image captioning by explicitly aligning entities in images and accompanying articles.",
+      "links": {
+        "Paper": "https://doi.org/10.1145/3801548",
+        "Preprint": "https://arxiv.org/abs/2402.19404"
+      },
+      "bibtex": "@article{zhang2026eama,\n  title = {{EAMA: Entity-Aware Multimodal Alignment Based Approach for News Image Captioning}},\n  author = {Junzhe Zhang and Huixuan Zhang and Xunjian Yin and Xiaojun Wan},\n  year = {2026},\n  journal = {ACM Transactions on Multimedia Computing, Communications, and Applications},\n  doi = {10.1145/3801548},\n  url = {https://doi.org/10.1145/3801548}\n}",
+      "thumbnail": "./assets/eama.png",
+      "thumbnailAlt": "Entity-aware multimodal alignment and self-supplemented caption generation"
+    },
+    {
+      "title": "FactNLI: Dynamic and Automated Fact-Based Augmentation of NLI Benchmarks",
+      "authors": [
+        "Yihan Lu",
+        "Junzhe Zhang",
+        "Huixuan Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2026,
+      "venue": "Findings of EMNLP",
+      "area": "Language Models and Evaluation",
+      "topics": [],
+      "description": "Augments natural language inference benchmarks with automatically generated examples grounded in facts.",
+      "links": {
+        "Paper": "https://aclanthology.org/2026.findings-emnlp.1234/",
+        "Repository (release pending)": "https://github.com/LuYanjie12/FactNLI"
+      },
+      "bibtex": "@inproceedings{lu2026factnli,\n  title = {{FactNLI: Dynamic and Automated Fact-Based Augmentation of NLI Benchmarks}},\n  author = {Yihan Lu and Junzhe Zhang and Huixuan Zhang and Xiaojun Wan},\n  year = {2026},\n  booktitle = {Findings of EMNLP},\n  doi = {10.18653/v1/2026.findings-emnlp.1234},\n  url = {https://aclanthology.org/2026.findings-emnlp.1234/}\n}",
+      "thumbnail": "./assets/factnli.png",
+      "thumbnailAlt": "FactNLI framework for retrieval, fact filtering, and example augmentation"
+    },
+    {
+      "title": "DecoCal: Decoding with Calibration in Diffusion Large Language Models",
+      "authors": [
+        "Fan Xu",
+        "Huixuan Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2026,
+      "venue": "ACL",
+      "area": "Language Models and Evaluation",
+      "topics": [],
+      "description": "Calibrates token confidence across denoising steps to improve decoding in diffusion language models.",
+      "links": {
+        "Paper": "https://aclanthology.org/2026.acl-long.545/",
+        "Code": "https://github.com/pku0xff/DecoCal"
+      },
+      "bibtex": "@inproceedings{xu2026decocal,\n  title = {{DecoCal: Decoding with Calibration in Diffusion Large Language Models}},\n  author = {Fan Xu and Huixuan Zhang and Xiaojun Wan},\n  year = {2026},\n  booktitle = {ACL},\n  doi = {10.18653/v1/2026.acl-long.545},\n  url = {https://aclanthology.org/2026.acl-long.545/}\n}",
+      "thumbnail": "./assets/decocal.png",
+      "thumbnailAlt": "Calibration, unmasking, and remasking in the DecoCal framework"
+    },
+    {
+      "title": "DAMON: A Dialogue-Aware MCTS Framework for Jailbreaking Large Language Models",
+      "authors": [
+        "Xu Zhang",
+        "Xunjian Yin",
+        "Dinghao Jing",
+        "Huixuan Zhang",
+        "Xinyu Hu",
+        "Xiaojun Wan"
+      ],
+      "year": 2025,
+      "venue": "EMNLP",
+      "area": "Language Models and Evaluation",
+      "topics": [],
+      "description": "Studies the robustness of language-model safeguards in multi-turn dialogue.",
+      "links": {
+        "Paper": "https://aclanthology.org/2025.emnlp-main.323/",
+        "Code": "https://github.com/pkulcwmzx/DAMON"
+      },
+      "bibtex": "@inproceedings{zhang2025damon,\n  title = {{DAMON: A Dialogue-Aware MCTS Framework for Jailbreaking Large Language Models}},\n  author = {Xu Zhang and Xunjian Yin and Dinghao Jing and Huixuan Zhang and Xinyu Hu and Xiaojun Wan},\n  year = {2025},\n  booktitle = {EMNLP},\n  doi = {10.18653/v1/2025.emnlp-main.323},\n  url = {https://aclanthology.org/2025.emnlp-main.323/}\n}",
+      "thumbnail": "./assets/damon.png",
+      "thumbnailAlt": "Tree-search component of the DAMON framework"
+    },
+    {
+      "title": "How Much To Guide: Revisiting Adaptive Guidance in Classifier-Free Guidance Text-to-Vision Diffusion Models",
+      "authors": [
+        "Huixuan Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2025,
+      "venue": "ACM Multimedia Asia (MMAsia)",
+      "area": "Multimodal Generation",
+      "topics": [],
+      "description": "Introduces Step AG, which applies classifier-free guidance only during early denoising steps to reduce inference cost while preserving image quality and prompt alignment.",
+      "links": {
+        "Paper": "https://doi.org/10.1145/3743093.3771070",
+        "Preprint": "https://arxiv.org/abs/2506.08351"
+      },
+      "bibtex": "@inproceedings{stepag2025,\n  title = {{How Much To Guide: Revisiting Adaptive Guidance in Classifier-Free Guidance Text-to-Vision Diffusion Models}},\n  author = {Huixuan Zhang and Xiaojun Wan},\n  booktitle = {ACM Multimedia Asia (MMAsia)},\n  year = {2025},\n  url = {https://doi.org/10.1145/3743093.3771070}\n}",
+      "thumbnail": "./assets/stepag.png",
+      "thumbnailAlt": "Generated examples comparing Step AG with standard classifier-free guidance"
+    },
+    {
       "year": 2025,
       "title": "R-Bind: Unified Enhancement of Attribute and Relation Binding in Text-to-Image Diffusion Models",
       "venue": "EMNLP",
@@ -52,13 +422,103 @@
       "topics": [
         "Text-to-Image Generation"
       ],
-      "thumbnail": "./assets/diffusion.png",
+      "thumbnail": "./assets/rbind.png",
       "description": "An inference-time method for improving attribute and relation binding in text-to-image diffusion models.",
       "links": {
         "Paper": "https://aclanthology.org/2025.emnlp-main.349/",
         "Code": "https://github.com/lleozhang/R-Bind"
       },
-      "bibtex": "@inproceedings{zhang-wan-2025,\n  title = {{R-Bind: Unified Enhancement of Attribute and Relation Binding in Text-to-Image Diffusion Models}},\n  author = {Zhang, Huixuan and Wan, Xiaojun},\n  booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},\n  year = {2025},\n  pages = {6856--6870},\n  url = {https://aclanthology.org/2025.emnlp-main.349/}\n}"
+      "bibtex": "@inproceedings{zhang-wan-2025,\n  title = {{R-Bind: Unified Enhancement of Attribute and Relation Binding in Text-to-Image Diffusion Models}},\n  author = {Zhang, Huixuan and Wan, Xiaojun},\n  booktitle = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},\n  year = {2025},\n  pages = {6856--6870},\n  url = {https://aclanthology.org/2025.emnlp-main.349/}\n}",
+      "area": "Multimodal Generation",
+      "thumbnailAlt": "R-Bind method overview showing attention-map optimization during denoising"
+    },
+    {
+      "title": "Minos: A Multimodal Evaluation Model for Bidirectional Generation Between Image and Text",
+      "authors": [
+        "Junzhe Zhang",
+        "Huixuan Zhang",
+        "Xinyu Hu",
+        "Li Lin",
+        "Mingqi Gao",
+        "Shi Qiu",
+        "Xiaojun Wan"
+      ],
+      "year": 2026,
+      "venue": "Findings of ACL",
+      "area": "Multimodal Evaluation",
+      "topics": [],
+      "description": "Develops a shared evaluator for text-to-image and image-to-text generation using quality-controlled training data and preference alignment.",
+      "links": {
+        "Paper": "https://aclanthology.org/2026.findings-acl.744/",
+        "Code": "https://github.com/reroze/MINOS"
+      },
+      "bibtex": "@inproceedings{minos2026,\n  title = {{Minos: A Multimodal Evaluation Model for Bidirectional Generation Between Image and Text}},\n  author = {Junzhe Zhang and Huixuan Zhang and Xinyu Hu and Li Lin and Mingqi Gao and Shi Qiu and Xiaojun Wan},\n  booktitle = {Findings of ACL},\n  year = {2026},\n  url = {https://aclanthology.org/2026.findings-acl.744/}\n}",
+      "thumbnail": "./assets/minos.png",
+      "thumbnailAlt": "Minos dataset construction pipeline for bidirectional generation evaluation"
+    },
+    {
+      "title": "Exploring and Evaluating Multimodal Knowledge Reasoning Consistency of Multimodal Large Language Models",
+      "authors": [
+        "Boyu Jia",
+        "Junzhe Zhang",
+        "Huixuan Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2025,
+      "venue": "Findings of EMNLP",
+      "area": "Multimodal Evaluation",
+      "topics": [],
+      "description": "Introduces four tasks and a dataset to measure whether multimodal models reach consistent reasoning outcomes across visual and textual inputs.",
+      "links": {
+        "Paper": "https://aclanthology.org/2025.findings-emnlp.639/"
+      },
+      "bibtex": "@inproceedings{reasoning2025,\n  title = {{Exploring and Evaluating Multimodal Knowledge Reasoning Consistency of Multimodal Large Language Models}},\n  author = {Boyu Jia and Junzhe Zhang and Huixuan Zhang and Xiaojun Wan},\n  booktitle = {Findings of EMNLP},\n  year = {2025},\n  url = {https://aclanthology.org/2025.findings-emnlp.639/}\n}",
+      "thumbnail": "./assets/reasoning.png",
+      "thumbnailAlt": "Examples of the four multimodal knowledge reasoning tasks"
+    },
+    {
+      "title": "JointCQ: Improving Factual Hallucination Detection with Joint Claim and Query Generation",
+      "authors": [
+        "Fan Xu",
+        "Huixuan Zhang",
+        "Zhenliang Zhang",
+        "Jiahao Wang",
+        "Xiaojun Wan"
+      ],
+      "year": 2026,
+      "venue": "Findings of ACL",
+      "area": "Hallucination and Factuality",
+      "topics": [],
+      "description": "Extracts factual claims and generates search queries jointly to improve evidence retrieval and verification for generated text.",
+      "links": {
+        "Paper": "https://aclanthology.org/2026.findings-acl.58/",
+        "Code & data": "https://github.com/pku0xff/JointCQ"
+      },
+      "bibtex": "@inproceedings{jointcq2026,\n  title = {{JointCQ: Improving Factual Hallucination Detection with Joint Claim and Query Generation}},\n  author = {Fan Xu and Huixuan Zhang and Zhenliang Zhang and Jiahao Wang and Xiaojun Wan},\n  booktitle = {Findings of ACL},\n  year = {2026},\n  url = {https://aclanthology.org/2026.findings-acl.58/}\n}",
+      "thumbnail": "./assets/jointcq.png",
+      "thumbnailAlt": "JointCQ training framework and factual hallucination detection pipeline"
+    },
+    {
+      "title": "ICR Probe: Tracking Hidden State Dynamics for Reliable Hallucination Detection in LLMs",
+      "authors": [
+        "Zhenliang Zhang",
+        "Xinyu Hu",
+        "Huixuan Zhang",
+        "Junzhe Zhang",
+        "Xiaojun Wan"
+      ],
+      "year": 2025,
+      "venue": "ACL",
+      "area": "Hallucination and Factuality",
+      "topics": [],
+      "description": "Detects hallucinations by tracking how model components update the residual stream across layers.",
+      "links": {
+        "Paper": "https://aclanthology.org/2025.acl-long.880/",
+        "Code": "https://github.com/XavierZhang2002/ICR_Probe"
+      },
+      "bibtex": "@inproceedings{icr2025,\n  title = {{ICR Probe: Tracking Hidden State Dynamics for Reliable Hallucination Detection in LLMs}},\n  author = {Zhenliang Zhang and Xinyu Hu and Huixuan Zhang and Junzhe Zhang and Xiaojun Wan},\n  booktitle = {ACL},\n  year = {2025},\n  url = {https://aclanthology.org/2025.acl-long.880/}\n}",
+      "thumbnail": "./assets/icr.png",
+      "thumbnailAlt": "ICR Probe method for tracking hidden-state updates across layers"
     },
     {
       "year": 2024,
@@ -71,13 +531,24 @@
       "topics": [
         "Multimodal Learning"
       ],
-      "thumbnail": "./assets/alignment.png",
+      "thumbnail": "./assets/hyperbole.png",
       "description": "A dataset and empirical study on identifying hyperbole using both text and images.",
       "links": {
         "Paper": "https://aclanthology.org/2024.lrec-main.759/",
         "Dataset": "https://github.com/lleozhang/Multimodal_Hyperbole"
       },
-      "bibtex": "@inproceedings{zhang-wan-2024,\n  title = {{Image Matters: A New Dataset and Empirical Study for Multimodal Hyperbole Detection}},\n  author = {Zhang, Huixuan and Wan, Xiaojun},\n  booktitle = {Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)},\n  year = {2024},\n  pages = {8652--8661},\n  url = {https://aclanthology.org/2024.lrec-main.759/}\n}"
+      "bibtex": "@inproceedings{zhang-wan-2024,\n  title = {{Image Matters: A New Dataset and Empirical Study for Multimodal Hyperbole Detection}},\n  author = {Zhang, Huixuan and Wan, Xiaojun},\n  booktitle = {Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)},\n  year = {2024},\n  pages = {8652--8661},\n  url = {https://aclanthology.org/2024.lrec-main.759/}\n}",
+      "area": "Multimodal Understanding",
+      "thumbnailAlt": "Attention-gate fusion architecture from Image Matters"
     }
+  ],
+  "publicationAreas": [
+    "Multimodal Generation",
+    "Multimodal Evaluation",
+    "Hallucination and Factuality",
+    "Data Contamination and Training Data Privacy",
+    "AI-Generated Image Detection",
+    "Multimodal Understanding",
+    "Language Models and Evaluation"
   ]
 }

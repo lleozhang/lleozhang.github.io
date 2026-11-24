@@ -32,7 +32,7 @@ nav { margin-left: auto; }
 .bar a { text-decoration: none; }
 .bar a:hover { text-decoration: underline; }
 .hero { display: grid; grid-template-columns: 12rem 1fr; align-items: center; gap: clamp(1.5rem, 5vw, 4rem); padding-block: 3rem; }
-.hero img { width: 100%; height: auto; aspect-ratio: 192/220; object-fit: cover; border-radius: .75rem; background: var(--panel); }
+.hero img { width: 100%; height: auto; aspect-ratio: 209/256; object-fit: cover; border-radius: .75rem; background: var(--panel); }
 h1, h2, h3, p { margin: 0; }
 h1, h2 { font-family: Georgia, serif; font-weight: 500; line-height: 1.15; }
 h1 { font-size: clamp(2.7rem, 7vw, 5rem); margin-block: .25rem .7rem; letter-spacing: -.055em; }
@@ -74,3 +74,17 @@ footer { border-top: 1px solid var(--line); padding-block: 1.5rem; font-size: .9
 @media (max-width: 380px) {
   #updates li, #experience li, .filters { grid-template-columns: 1fr; gap: .25rem; }
 }
+
+.paper-group { margin-top: 1.5rem; }
+.paper-group > h3 { color: var(--accent); padding-bottom: .45rem; border-bottom: 1px solid var(--line); }
+article { grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); }
+article.without-figure { grid-template-columns: 1fr; }
+article h4 { font-size: 1.1rem; line-height: 1.4; margin: 0; }
+.paper-figure { align-self: start; background: #fff; padding: .35rem; border: 1px solid var(--line); border-radius: .45rem; }
+.paper-figure img { display: block; width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; background: #fff; }
+@media (max-width: 680px) {
+  article { grid-template-columns: 1fr; }
+  .paper-figure { width: min(100%, 20rem); }
+}
+
+#contacts a { overflow-wrap: anywhere; }

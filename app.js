@@ -67,7 +67,7 @@ function citation(bibtex) {
 function paperCard(paper, name) {
   const article = element('article');
   const image = element('img');
-  image.src = paper.thumbnail || './assets/diffusion.png';
+  if (paper.thumbnail) image.src = paper.thumbnail;
   image.alt = paper.thumbnailAlt || '';
   image.loading = 'lazy';
   image.width = 320;
@@ -78,8 +78,8 @@ function paperCard(paper, name) {
     if (index) authors.append(', ');
     authors.append(author === name ? element('strong', author) : author);
   });
-  body.append(element('h3', paper.title), authors,
-    element('p', [paper.venue, paper.year, ...paper.topics].filter(Boolean).join(' · '), 'meta'),
+  body.append(element('h4', paper.title), authors,
+    element('p', [paper.venue, paper.year].filter(Boolean).join(' · '), 'meta'),
     element('p', paper.description));
   const links = element('div', '', 'links');
   for (const [label, href] of Object.entries(paper.links || {})) {
@@ -87,14 +87,22 @@ function paperCard(paper, name) {
   }
   if (links.childElementCount) body.append(links);
   if (paper.bibtex) body.append(citation(paper.bibtex));
-  article.append(image, body);
+  if (paper.thumbnail) {
+    const figure = link('', paper.thumbnail);
+    figure.className = 'paper-figure';
+    figure.append(image);
+    article.append(figure);
+  } else {
+    article.classList.add('without-figure');
+  }
+  article.append(body);
   return article;
 }
 
 async function load() {
   const response = await fetch('./data.json');
   if (!response.ok) throw new Error('Could not load data.json');
-  const { profile, interests, news, experience, publications } = await response.json();
+  const { profile, interests, news, experience, publications, publicationAreas } = await response.json();
   document.title = profile.name + ' · Research';
   for (const [id, value] of Object.entries({
     brand: profile.name,
@@ -121,23 +129,32 @@ async function load() {
   const year = byId('year');
   const topic = byId('topic');
   const search = byId('search');
-  const papers = [...publications].sort((a, b) => b.year - a.year);
+  const firstAuthorRank = (paper) => Number(paper.authors[0] === profile.name);
+  const papers = [...publications].sort((a, b) =>
+    firstAuthorRank(b) - firstAuthorRank(a) || b.year - a.year);
   const years = new Set(papers.map((paper) => paper.year));
-  const topics = [...new Set(papers.flatMap((paper) => paper.topics))].sort();
+  const areas = [...new Set([...publicationAreas, ...papers.map((paper) => paper.area)])];
   for (const value of years) year.add(new Option(value, value));
-  for (const value of topics) topic.add(new Option(value, value));
+  for (const value of areas) topic.add(new Option(value, value));
 
   function renderPapers() {
     const words = search.value.toLowerCase().trim().split(/\s+/);
     const matching = papers.filter((paper) => {
-      const searchText = [paper.title, paper.venue, paper.description, ...paper.authors, ...paper.topics].join(' ').toLowerCase();
+      const searchText = [paper.title, paper.venue, paper.description, paper.area, ...paper.authors, ...paper.topics].join(' ').toLowerCase();
       return (!year.value || String(paper.year) === year.value)
-        && (!topic.value || paper.topics.includes(topic.value))
+        && (!topic.value || paper.area === topic.value)
         && words.every((word) => searchText.includes(word));
     });
     byId('count').textContent = matching.length + ' of ' + papers.length + ' publications';
-    byId('papers').replaceChildren(...(matching.length
-      ? matching.map((paper) => paperCard(paper, profile.name))
+    const groups = areas.flatMap((area) => {
+      const entries = matching.filter((paper) => paper.area === area);
+      if (!entries.length) return [];
+      const group = element('section', '', 'paper-group');
+      group.append(element('h3', area), ...entries.map((paper) => paperCard(paper, profile.name)));
+      return [group];
+    });
+    byId('papers').replaceChildren(...(groups.length
+      ? groups
       : [element('p', 'No publications match the current filters.', 'empty')]));
   }
   search.addEventListener('input', renderPapers);
