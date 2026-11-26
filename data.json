@@ -5,11 +5,11 @@
     "institution": "Peking University",
     "photo": "./assets/huixuan-zhang.png",
     "photoAlt": "Huixuan Zhang",
-    "bio": "
-    I am a PhD student at the Wangxuan Institute of Computer Technology, Peking University. 
-    My current research focuses on multimodal generation, particularly text-to-image diffusion models. 
-    I study inference-time alignment, controllable generation, and improved guidance methods for diffusion models.
-    I have also worked on multimodal evaluation, hallucination detection, benchmark contamination, and AI-generated image detection.
+    "bio": " \
+    I am a PhD student at the Wangxuan Institute of Computer Technology, Peking University. \
+    My current research focuses on multimodal generation, particularly text-to-image diffusion models. \
+    I study inference-time alignment, controllable generation, and improved guidance methods for diffusion models.\
+    I have also worked on multimodal evaluation, hallucination detection, benchmark contamination, and AI-generated image detection.\
     I serve as a reviewer for top-tier conferences including ICML, NeurIPS, ICLR, AAAI, and ACL. I received a Gold Reviewer award at ICML 2026.",
     "links": [
       {
